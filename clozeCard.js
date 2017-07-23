@@ -1,11 +1,11 @@
 var BasicCard = require("./basicCard.js");
-var ClozeCard = function(text, cloze) {
+var ClozeCard = function (text, cloze) {
   this.fullText = text;
   this.cloze = cloze;
   this.partial = this.fullText.replace(this.cloze, "...");
 };
 
-ClozeCard.prototype.check = function() {
+ClozeCard.prototype.check = function () {
   if (this.fullText.search(this.cloze) > -1) {
     console.log("cloze: " + firstPresidentCloze.cloze);
     console.log("partial: " + firstPresidentCloze.partial);
@@ -24,7 +24,7 @@ var firstPresidentCloze = new ClozeCard(
   "George Washington was the first president of the United States.", "Washington");
 var secondPresidentCloze = new ClozeCard(
   "George Washington was the first president of the United States.", "test");
-  
+
 firstPresidentCloze.check();
 console.log("::::::::::::::::::::::::::::")
 secondPresidentCloze.check();
